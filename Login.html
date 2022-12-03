@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-signin-client_id" content="885258239499-35kk0d29eb6jbrtes5g0abbv4k2rqo4v.apps.googleusercontent.com">
+  <title>Inicio/Registro</title>
+  <link href='httzps://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="./css/Login.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!-- Menu de navegacio aan -->
+
+            
+<div class="container">
+  <div class="frame">
+    <a href="index.html">
+      <img  class="logo"src="./imgs/Logo.ico" alt="">
+  </a>   
+    <div class="nav">
+      <ul class="links">
+        <li class="signin-active"><a class="btn">Iniciar</a></li>
+        <li class="signup-inactive"><a class="btn">Registrar </a></li>
+      </ul>
+    </div>
+    <div ng-app ng-init="checked = false">
+				        <form class="form-signin" action="php/Validar.php" method="post" name="form">
+          <label for="username">E-mail</label>
+          <input class="form-styling" type="email" name="Email" placeholder=""/>
+          <label for="password">Contraseña</label>
+          <input class="form-styling" type="password" name="Password" placeholder=""/>
+          <div>
+            <button class="btn-animate" type="submit" value="Iniciar Sesión">Iniciar Sesión </button>
+            <a class="btn-atras" href="index.html">Atrás</a>
+          </div>
+
+          <div class="IGoogle">
+          <button class="btn-animate" onclick="initOAuth('google')">Iniciar con google</button>
+        </div>
+          <div>
+           
+          </div>
+				</form>
+        
+				        <form class="form-signup" action="php/Registro.php" method="POST" name="formm">
+          <label for="fullname">Nombre</label>
+          <input class="form-styling" type="text" name="Nombre" placeholder=""  required/>
+          <label for="fullname">Direcci&oacute;n</label>
+          <input class="form-styling" type="text" name="Direccion" placeholder="" required/>
+          <label for="fullname">Tel&eacute;fono</label>
+          <input class="form-styling" type="text" name="Telefono" minlength="10" maxlength="10"placeholder="" required/>
+          <label for="email">E-mail</label>
+          <input class="form-styling" type="email" name="Email" placeholder="" required/>
+          <label for="password">Contraseña</label>
+          <input class="form-styling" type="password" name="Password" placeholder="" required/>
+          <div>
+            <button class="btn-animate" type="submit" value="Registrarse">Registrarse</button>
+          </div>
+          </div>
+				</form>
+    </div>
+
+<!-- partial -->
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script  src="./js/login.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="./js/hello.all.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

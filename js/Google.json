@@ -1,0 +1,10 @@
+{"web":{
+    "client_id":"885258239499-7l1hp87qjd0f605a6mlmlcm35ao9st3m.apps.googleusercontent.com",
+    "project_id":"maps-1571195447004",
+    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+    "token_uri":"https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret":"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",
+    "redirect_uris":["http://localhost/solovino/index.html"]
+    }
+    }

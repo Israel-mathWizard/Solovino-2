@@ -1,0 +1,138 @@
+#titulo{
+	height: 50px;
+	width: 100%;
+	background-color: #D71868;
+		
+}
+
+#titulo h3{
+	font-style: normal;
+	font-weight: 800;
+	font-size: 27px;
+	line-height: 49px;
+	color: black;
+}
+
+#crear{
+	margin: 15px 15px;
+	background-color: #FFB7C5;
+}
+
+#formu{
+	margin: 15px;
+}
+
+.input{
+  width: 100%;
+  height: 30px;
+  background: #ABCEB4;
+  border-radius: 8px;  
+  color: black;
+}
+
+.input-col{
+	width: 250px;
+  height: 30px;
+  background: #ABCEB4;
+  border-radius: 8px;  
+  color: black;
+  padding-right: 20px;
+}
+
+
+
+.row{
+	display: flex;
+	margin: 15px;
+	width: 96%;
+}
+
+.column{
+	margin-right: auto;
+	width: auto;
+}
+
+.column2{
+	margin-right: auto;
+	width: 50%;
+}
+
+.input-group{
+
+}
+
+.input-group > label{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 14px;
+	color: black;
+
+}
+
+.input-group > input{
+	width: 100%;
+	height: 30px;
+	background: #ABCEB4;
+	border-radius: 8px;  
+	color: black;
+
+}
+
+#ubi{
+	width: 100%;
+}
+
+#ubi > label{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 14px;
+	color: black;
+}
+
+#ubi > textarea{
+  width: 100%;
+  height: 80px;
+  background: #ABCEB4;
+  border-radius: 12px;  
+  color: black;
+}
+
+#adjunt > label{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 14px;
+	color: black;
+}
+
+#tipoMasc > label{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 14px;
+	color: black;
+}
+
+#tipoMasc > select{
+  	background: #A9A9A9;
+}
+
+#btn-agregar{
+	display: flex;
+	justify-content: center;
+}
+
+#btn-agregar > input{
+	width: 14%;
+	background: #4CBB17;
+	border: 1px solid #000000;
+	border-radius: 9px;
+	font-weight: 600;
+
+}
+
+#NuevaMasc-container{
+	font-family: 'Montserrat';
+}

@@ -18,6 +18,7 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
+
     <!-- Menu de navegacion -->
     <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
         <div class="container">
@@ -75,6 +76,7 @@
             require('./conexion.php');
             $resul = $db_conectar->query("SELECT * FROM mascotas");  
                 while ($datos = $resul->fetch_assoc()){
+if($datos['Estatus']!='Aceptado'){                    
 if ($datos['TipoMasc'] === 'perro') { ?>
                 <div class="col-md-6 col-lg-4 web perro">
                     <div class="portfolio-item">
@@ -119,7 +121,8 @@ if ($datos['TipoMasc'] === 'perro') { ?>
                     </div>                                                       
                 </div> <?php ;
 } 
-} ?> 
+} 
+}?> 
                 </div>
             </div>
          </section>

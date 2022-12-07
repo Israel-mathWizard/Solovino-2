@@ -70,6 +70,7 @@
             require('./conexion.php');
             $resul = $db_conectar->query("SELECT * FROM mascotas");  
                 while ($datos = $resul->fetch_assoc()){
+if($datos['Estatus']!='Aceptado'){
 if ($datos['TipoMasc'] === 'perro') { ?>
                 <div class="col-md-6 col-lg-4 web perro">
                     <div class="portfolio-item">
@@ -103,6 +104,7 @@ if ($datos['TipoMasc'] === 'perro') { ?>
                         </div>
                     </div>                                                       
                 </div> <?php ;
+}
 } 
 } ?>
         </div> <!--portfolio-container-->

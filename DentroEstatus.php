@@ -14,6 +14,10 @@
     
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+     <?php 
+    session_start();
+    $NM=$_SESSION['Nombre'];
+    ?>
 
     <!-- page Navigation -->
     <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
@@ -58,12 +62,16 @@
             <th>Estatus</th>
 
         </tr>
+        
     </thead>
 <?php
 require('./conexion.php');
-$consulta="SELECT NombreMasc, Caracteristicas, Genero, Edad, Tamanio, Estatus FROM adoptador a INNER JOIN mascotas m ON a.IdAdopt = m.adoptador_IdAdopt";
-$resultado=mysqli_query($db_conectar, $consulta);
-while ($row=mysqli_fetch_array($resultado)){?>
+$consulta="SELECT NombreMasc, Caracteristicas, Genero, Edad, Tamanio, Estatus FROM adoptador a INNER JOIN mascotas m ON a.IdAdopt = m.adoptador_IdAdopt WHERE a.NombreAdopt = ?";
+$stmt = $db_conectar->prepare($consulta);
+$stmt->bind_param("s", $NM);
+$stmt->execute();
+$result = $stmt->get_result();
+while ($row=$result->fetch_assoc()){?>
     <tr>
         <th id=""><?php echo $row['NombreMasc']; ?></th>
         <th id=""><?php echo $row['Caracteristicas']; ?></th>

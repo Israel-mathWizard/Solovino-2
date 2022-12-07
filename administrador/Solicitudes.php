@@ -65,10 +65,11 @@
 
     <?php
 require('../conexion.php');
-$consulta="SELECT IdAdopt, NombreAdopt, TelefonoAdopt, EmailAdopt, MotivoAdopc, DondeVivira, NombreMasc, IdMasc FROM adoptador a INNER JOIN mascotas m ON a.IdAdopt = m.adoptador_IdAdopt";
+$consulta="SELECT IdAdopt, NombreAdopt, TelefonoAdopt, EmailAdopt, MotivoAdopc, DondeVivira, NombreMasc, IdMasc, Estatus FROM adoptador a INNER JOIN mascotas m ON a.IdAdopt = m.adoptador_IdAdopt";
 $resultado=mysqli_query($db_conectar, $consulta);
-while ($row=mysqli_fetch_array($resultado)){ ?>
-
+while ($row=mysqli_fetch_array($resultado)){ 
+if($row['Estatus']!='Aceptado'){
+    ?> 
     <tr>
         <th ><?php echo $row['NombreAdopt']; ?></th>
         <th ><?php echo $row['TelefonoAdopt']; ?></th>
@@ -82,7 +83,7 @@ while ($row=mysqli_fetch_array($resultado)){ ?>
                 <img src="../imgs/wrong-icon.png" alt="tache">
             </a></div></th>
     </tr>
-    <?php } 
+    <?php }} 
     $db_conectar->close();
     ?>
     </table>

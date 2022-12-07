@@ -4,7 +4,7 @@ require('../conexion.php');
 	$name=$_GET['name'];
 
 if ($name===paloma) {
-	$actua="UPDATE mascotas SET Estatus = 'Aprovado' WHERE md5(IdMasc) = '$id'";
+	$actua="UPDATE mascotas SET Estatus = 'Aceptado' WHERE md5(IdMasc) = '$id'";
 	if ($db_conectar->query($actua))header('location: Solicitudes.php');
 }elseif ($name===tache) {
 $actua="UPDATE mascotas SET Estatus = 'Rechazado' WHERE md5(IdMasc) = '$id'";

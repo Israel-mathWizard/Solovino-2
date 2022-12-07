@@ -1,10 +1,10 @@
 <?php
     require('../conexion.php');
-    $Email=$_POST['Email'];
+    $Nombre=$_POST['Nombre'];
     $Password=$_POST['Password'];
 
     //conectar a base de datos
-    $consulta="SELECT * FROM usuarios WHERE Email='$Email' and Password ='$Password'";
+    $consulta="SELECT * FROM usuarios WHERE Nombre='$Nombre' and Password ='$Password'";
  
     $Result=mysqli_query($db_conectar, $consulta);
 
@@ -12,15 +12,15 @@
 
         if ($filas>0) {
              // inicio de sesion..
-            if($Email==='israelrh78@gmail.com' || $Email==='Yazzmintrejo17@gmail.com'){
+            if($Nombre==='Admin'){
 
                 session_start();
-            $_SESSION['Email']=$Email;
+            $_SESSION['Nombre']=$Nombre;
             header("location:../administrador/CatalogoAdm.php");
         }else{
              session_start();
-            $_SESSION['Email']=$Email;
-            header("location:../DentroIndex.html");
+             $_SESSION['Nombre']=$Nombre;
+           header("location:../DentroIndex.html");
         }
         // alerta de usuario ou contraseña no valido
          echo '<script language="javascript">alert("Error de autentificacion");window.location.href="../Login.html"</script>';
